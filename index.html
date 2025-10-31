@@ -57,7 +57,9 @@
             display: flex;
             justify-content: center;
             list-style: none;
-            gap: 30px;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 0 15px;
         }
 
         .nav-links a {
@@ -67,10 +69,22 @@
             border-radius: 25px;
             transition: all 0.3s ease;
             font-weight: bold;
+            white-space: nowrap;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            display: block;
         }
 
         .nav-links a:hover {
             background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* ✅ ACTIVE STATE - THÊM PHẦN NÀY */
+        .nav-links a.active {
+            background: linear-gradient(90deg, #ff6600, #ff9900);
+            box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
             transform: translateY(-2px);
         }
 
@@ -225,12 +239,36 @@
             }
             
             .nav-links {
-                flex-direction: column;
-                gap: 10px;
+                flex-direction: row;
+                gap: 8px;
+                justify-content: center;
+                padding: 0 10px;
+            }
+            
+            .nav-links a {
+                padding: 8px 12px;
+                min-width: 100px;
+                font-size: 0.9em;
             }
             
             .logo {
                 font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 5px;
+            }
+            
+            .nav-links a {
+                padding: 6px 8px;
+                min-width: 80px;
+                font-size: 0.8em;
+            }
+            
+            .container {
+                padding: 10px;
             }
         }
     </style>
@@ -239,18 +277,19 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <div class="logo">♛ CLB Cờ Vua</div>
+            <div class="logo">♛ Chess.nam</div>
             <div class="subtitle">Nơi hội tụ những kỳ thủ tài năng</div>
         </header>
 
         <!-- Navigation -->
         <nav>
             <ul class="nav-links">
-                <li><a href="https://japokies.github.io/" class="btn">Trang Chủ</a></li>
-                <li><a href="indev.html" class="btn">Kỳ Thủ</a></li>
-                <li><a href="indev.html" class="btn">Giải Đấu</a></li>
-                <li><a href="indev.html" class="btn">Phân Tích</a></li>
-                <li><a href="indev.html" class="btn">Giới Thiệu</a></li>
+                <li><a href="index.html" class="btn active">Trang Chủ</a></li>
+                <li><a href="players.html" class="btn">Kỳ Thủ</a></li>
+                <li><a href="tournaments.html" class="btn">Giải Đấu</a></li>
+                <li><a href="analysis.html" class="btn">Phân Tích</a></li>
+                <li><a href="about.html" class="btn">Giới Thiệu</a></li>
+                <li><a href="updlog.html" class="btn">Update Log</a></li>
             </ul>
         </nav>
 
@@ -262,7 +301,7 @@
                 <div class="card">
                     <h2>🎯 Giải Đấu Đang Diễn Ra</h2>
                     <div class="tournament-item live">
-                        <h3>Giải Đấu Phạm Vi Lớp Lần I - Giữa Học Kì I | 2025</h3>
+                        <h3>Giải Đấu Phạm Vi Lớp Lần Ⅰ - Giữa Học Kì Ⅰ | 2025</h3>
                         <p>📅 31/10 - 20/11/2025 | 🏆 6 kỳ thủ</p>
                         <p>Đang diễn ra: Vòng 1</p>
                         <a href="indev.html" class="btn">Xem Chi Tiết</a>
@@ -285,7 +324,7 @@
             <div class="right-column">
                 <!-- Top Players -->
                 <div class="card">
-                    <h2>🏆 BXH Kỳ Thủ</h2>
+                    <h2>🏆 Bảng Xếp Hạng Mọi Kỳ Thủ</h2>
                     <div class="player-item">
                         <div class="player-avatar">1</div>
                         <div>
@@ -307,7 +346,7 @@
                             <br>Rate: B+
                         </div>
                     </div>
-                    <a href="indev.html" class="btn btn-secondary">Xem Tất Cả</a>
+                    <a href="players.html" class="btn btn-secondary">Xem Tất Cả</a>
                 </div>
 
                 <!-- Upcoming Tournaments -->
@@ -333,14 +372,18 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                 <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
                     <div style="font-size: 2em; color: #ffcc00;">6</div>
-                    <div>Kỳ Thủ</div>
+                    <div>Kỳ Thủ Tham Gia Hiện Tại</div>
+                </div>
+                <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                    <div style="font-size: 2em; color: #ffcc00;">13</div>
+                    <div>Tổng Số Kỳ Thủ Từng Tham Gia</div>
                 </div>
                 <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
                     <div style="font-size: 2em; color: #ffcc00;">1</div>
                     <div>Giải Đấu</div>
                 </div>
                 <div style="text-align: center; padding: 15px; background: rgba(255,255,255,0.1); border-radius: 8px;">
-                    <div style="font-size: 2em; color: #ffcc00;">15</div>
+                    <div style="font-size: 2em; color: #ffcc00;">13</div>
                     <div>Ván Đấu</div>
                 </div>
             </div>
@@ -352,5 +395,20 @@
             Liên hệ: phamhoangnam4a3nbn17@email.com | Theo dõi trên Facebook: chưa ghi=)))
         </footer>
     </div>
+
+    <script>
+        // Auto highlight current page in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
