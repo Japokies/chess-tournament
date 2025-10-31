@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✅ Trang đang trong quá trình phát triển</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #fff;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        p {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #ddd;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer span {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+        button {
+            background: linear-gradient(90deg, #ff6600, #ff9900);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.5s ease;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        }
+        button:hover:before {
+            left: 100%;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hiện tại trang này đang được phát triển</h1>
+        <p>Chân thành xin lỗi, hiện tại trang này <strong>đang trong quá trình phát triển</strong> và hiện giờ bạn chưa thể xem nó.<br>Vui lòng quay lại trang chính của <strong>NamHub</strong></p>
+        <button onclick="window.location.href='https://chatgpt.com'">Thắc mắc thêm</button>
+    </div>
+    <footer>
+        ©<span>Phạm Hoàng Nam 8A2 | 2025</span> - Người mới học lập trình 🚀=))))
+    </footer>
+</body>
+</html>
