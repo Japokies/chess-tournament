@@ -8,3 +8,5 @@
 - Lê Hồng Long
 
 Bản quyền trang web thuộc **© Phạm Hoàng Nam 8A2 - 2025** 
+
+**Trang README này được viết bởi Nam=))) vào lúc 14:00 ngày 01/11/2025 (Viết thử)**
